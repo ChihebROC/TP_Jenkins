@@ -3,11 +3,11 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'python -m venv .venv && . .venv/bin/activate && python -m pip install -r requirements.txt'
+                sh 'python3 -m venv .venv && . .venv/bin/activate && python3 -m pip install -r requirements.txt'
                 echo 'build'
             }
         }
-		stage('Test') {
+	stage('Test') {
             steps {
                 sh '. .venv/bin/activate && pytest --junit-xml test-reports/results.xml reverse_test.py'
             }
