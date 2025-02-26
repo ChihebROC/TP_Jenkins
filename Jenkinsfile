@@ -9,7 +9,7 @@ pipeline {
         }
 		stage('Test') {
             steps {
-                sh '. .venv/bin/activate && pytest--junit-xml test-reports/results.xml reverse_test.py'
+                sh '. .venv/bin/activate && pytest --junit-xml test-reports/results.xml reverse_test.py'
             }
             post {
                 always {
