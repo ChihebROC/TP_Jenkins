@@ -26,4 +26,5 @@ class TestReverse(unittest.TestCase):
     self.assertEqual(reverse_name(testcase), expected)
 
 # Run the tests
-unittest.main()
+if __name__ == "__main__":
+	unittest.main()
